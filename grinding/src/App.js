@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useRef, useState } from 'react';
 import { atom, useAtom } from 'jotai';
+import axios from 'axios';
+import People from './People';
 
 const valore = atom(10);
 
@@ -26,8 +28,11 @@ function App() {
 
   return (
     <div className="App">  
-      <DadoMalefico />                                               {/*propsNumero3="CIAOOOOOOOO!!!!!" */}
-      <CompConProps funzioneACaso={()=>console.log("ciao")}   {...propsDaPassare}  />
+
+      <People />
+
+      {/* <DadoMalefico />                                               /*propsNumero3="CIAOOOOOOOO!!!!!" 
+      <CompConProps funzioneACaso={()=>console.log("ciao")}   {...propsDaPassare}  /> */}
       {/* <CompConProps   propsNumero1="ciao " propsNumero2="addio"  propsNumero3={funzioneRestituisceCiao} /> */}
     </div>
   );                 //{...propsDaPassare}  SINTASSI DI SPREAD
